@@ -14,9 +14,9 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Extract project ZIP
+      - name: Extract updated project ZIP
         run: |
-          unzip -q PRESCRIPTION_APK_V1.zip -d extracted
+          unzip -q PRESCRIPTION_V1_OPTIONAL_PATIENT_2IN.zip -d extracted
 
       - name: Set up Java
         uses: actions/setup-java@v4
@@ -36,5 +36,5 @@ jobs:
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
-          name: PRESCRIPTION-V1-APK
+          name: PRESCRIPTION-V2-APK
           path: extracted/PRESCRIPTION_APK_V1/app/build/outputs/apk/debug/app-debug.apk
